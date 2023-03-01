@@ -14,7 +14,7 @@ In this project, we reproduce PS-MT [[Paper](https://arxiv.org/abs/2111.12903)|[
 
 | Model | Backbone  | Resolution | Training Iters | mIoU  |                            Links                             |
 | :---: | :-------: | :--------: | :------------: | :---: | :----------------------------------------------------------: |
-| PS-MT | resnet101 |  512*512   |     98000      | 78.05 | [model](链接: https://pan.baidu.com/s/1wWYxRdMSDvET2dUo1cxXgA?pwd=qyvp 提取码: qyvp 复制这段内容后打开百度网盘手机App，操作更方便哦) |
+| PS-MT | resnet101 |  512*512   |     20000      | 78.05 | [model](链接: https://pan.baidu.com/s/1wWYxRdMSDvET2dUo1cxXgA?pwd=qyvp 提取码: qyvp 复制这段内容后打开百度网盘手机App，操作更方便哦) |
 
 ## Prepare Work
 
@@ -42,7 +42,7 @@ python -m pip install paddlepaddle-gpu==2.3.0 -i https://mirror.baidu.com/pypi/s
 
 2. predict on one GPU 
 
-   1. Download the [trained model](链接: https://pan.baidu.com/s/1wWYxRdMSDvET2dUo1cxXgA?pwd=qyvp 提取码: qyvp 复制这段内容后打开百度网盘手机App，操作更方便哦) on Pascal VOC12, and save it to model.pdparams
+   1. Download the  [trained model](链接: https://pan.baidu.com/s/1wWYxRdMSDvET2dUo1cxXgA?pwd=qyvp 提取码: qyvp 复制这段内容后打开百度网盘手机App，操作更方便哦) on Pascal VOC12, and save it to model.pdparams
 
    ```
    python predict.py
