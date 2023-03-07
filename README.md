@@ -14,7 +14,7 @@ In this project, we reproduce PS-MT [[Paper](https://arxiv.org/abs/2111.12903)|[
 
 | Model | Backbone  | Resolution | Training Iters | mIoU  |                            Links                             |
 | :---: | :-------: | :--------: | :------------: | :---: | :----------------------------------------------------------: |
-| PS-MT | resnet101 |  512*512   |     20000      | 78.05 | [model](链接: https://pan.baidu.com/s/1wWYxRdMSDvET2dUo1cxXgA?pwd=qyvp 提取码: qyvp 复制这段内容后打开百度网盘手机App，操作更方便哦) |
+| PS-MT | resnet101 |  512*512   |     20000      | 78.05 | [model](链接: https://pan.baidu.com/s/1wWYxRdMSDvET2dUo1cxXgA?pwd=qyvp 提取码: qyvp 复制这段内容后打开百度网盘手机App，操作更方便哦)\|[log](https://wandb.ai/ps-mt-2022/PS-MT(VOC12)?workspace=user-2275029710) |
 
 ## Prepare Work
 
@@ -31,12 +31,16 @@ python -m pip install paddlepaddle-gpu==2.3.0 -i https://mirror.baidu.com/pypi/s
 
 1. Download [origion dataset](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar),[SegmentationClassAug](https://www.dropbox.com/s/oeu149j8qtbs1x0/SegmentationClassAug.zip?dl=0)
 2. Download [pretrained model](https://onedrive.live.com/redir?resid=B71317D47B7AC1CB!895&authkey=!AGEiz96zF_Rougc&e=c5cZvF) on Pascal VOC12 and save it to paddleseg/models/.
+2. you should put the files in voc_split into /VOCtrainval_11-May-2012/VOCdevkit/VOC2012/ImageSets/Segmentation
 
 ### 3. Train and test
 
 1. Train on one GPU
 
+   put the pretrained model in the paddleseg/models/
+
    ```
+   python torch_to_paddle.py
    python train.py
    ```
 
